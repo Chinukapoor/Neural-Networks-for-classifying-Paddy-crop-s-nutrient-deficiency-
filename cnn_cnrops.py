@@ -5,7 +5,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage import transform
-
+import tensorflow as tf
 
 def load_data(data_directory):
     directories = [d for d in os.listdir(data_directory)
@@ -58,7 +58,7 @@ for i in range(len(crop_types)):
 
 plt.show()
 
-import tensorflow as tf
+
 
 # Initialize placeholders
 x = tf.placeholder(dtype = tf.float32, shape = [None, 28, 28])
